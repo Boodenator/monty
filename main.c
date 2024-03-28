@@ -1,7 +1,6 @@
 #include "monty.h"
 
 var_t var = {NULL, NULL, NULL, 0};
-stack_t *head = NULL;
 /**
 * main - monty code interpreter
 * @argc: number of arguments
