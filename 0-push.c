@@ -1,14 +1,14 @@
 #include "monty.h"
 
 /**
- * f_push - push new node to stack
+ * f_push - add node to the stack
  * @head: stack head
  * @counter: line_number
  * Return: no return
 */
 void f_push(stack_t **head, unsigned int counter)
 {
-	int i, j = 0, flag = 0;
+	int n, j = 0, flag = 0;
 
 	if (var.arg)
 	{
@@ -30,9 +30,9 @@ void f_push(stack_t **head, unsigned int counter)
 		free(var.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
-	i = atoi(var.arg);
+	n = atoi(var.arg);
 	if (var.lifi == 0)
-		addnode(head, i);
+		addnode(head, n);
 	else
-		addqueue(head, i);
+		addqueue(head, n);
 }

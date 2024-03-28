@@ -1,12 +1,13 @@
 #include "monty.h"
 
-/**
-* main - code interpreter
-* @argc: arguments numbber
-* @argv: monty file location
-* Return: 0 if success
-*/
 var_t var = {NULL, NULL, NULL, 0};
+stack_t *head = NULL;
+/**
+* main - monty code interpreter
+* @argc: number of arguments
+* @argv: monty file location
+* Return: 0 on success
+*/
 int main(int argc, char *argv[])
 {
 	char *content;
