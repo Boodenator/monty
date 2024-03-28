@@ -20,12 +20,12 @@ void f_swap(stack_t **head, unsigned int counter)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
 		fclose(var.file);
-		free(bus.content);
+		free(var.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
-	aux = h->i;
-	h->i = h->next->i;
-	h->next->i = aux;
+	aux = h->n;
+	h->n = h->next->n;
+	h->next->n = aux;
 }
