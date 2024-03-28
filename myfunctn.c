@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
-* execute - executes the opcode
-* @stack: head linked list - stack
+* execute - opcode exectution
+* @stack: head lnked list - stack
 * @counter: line_counter
-* @file: poiner to monty file
+* @file: ptr to monty
 * @content: line content
 * Return: no return
 */
@@ -34,8 +34,8 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
-	bus.arg = strtok(NULL, " \n\t");
-	while (opst[i].opcode && op)
+	var.arg = strtok(NULL, " \n\t");
+	 while (opst[i].opcode && op)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)
 		{	opst[i].f(stack, counter);
@@ -43,42 +43,42 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		}
 		i++;
 	}
-	if (op && opst[i].opcode == NULL)
-	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
-		fclose(file);
-		free(content);
-		free_stack(*stack);
-		exit(EXIT_FAILURE); }
-	return (1);
+	  if (op && opst[i].opcode == NULL)
+        { fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
+                fclose(file);
+                free(content);
+                free_stack(*stack);
+                exit(EXIT_FAILURE); }
+        return (1);
 }
 
 /**
- * addnode - add node to the head stack
- * @head: head of the stack
+ * addnode - add new node to head
+ * @head: stack head
  * @n: new_value
  * Return: no return
 */
 void addnode(stack_t **head, int n)
 {
 
-	stack_t *new_node, *aux;
+	stack_t *nw_nod, *aux;
 
 	aux = *head;
-	new_node = malloc(sizeof(stack_t));
-	if (new_node == NULL)
+	nw_nod = malloc(sizeof(stack_t));
+	if (nw_nod == NULL)
 	{ printf("Error\n");
 		exit(0); }
 	if (aux)
-		aux->prev = new_node;
-	new_node->n = n;
-	new_node->next = *head;
-	new_node->prev = NULL;
-	*head = new_node;
+		aux->prev = nw_nod;
+	nw_nod->n = n;
+	nw_nod->next = *head;
+	nw_nod->prev = NULL;
+	*head = nw_nod;
 }
 
 /**
-* free_stack - frees a doubly linked list
-* @head: head of the stack
+* free_stack -> frees dbly lnked list
+* @head: stack head
 */
 void free_stack(stack_t *head)
 {

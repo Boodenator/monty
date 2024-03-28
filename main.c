@@ -1,12 +1,12 @@
 #include "monty.h"
 
-bus_t bus = {NULL, NULL, NULL, 0};
 /**
-* main - monty code interpreter
-* @argc: number of arguments
+* main - code interpreter
+* @argc: arguments numbber
 * @argv: monty file location
-* Return: 0 on success
+* Return: 0 if success
 */
+var_t var = {NULL, NULL, NULL, 0};
 int main(int argc, char *argv[])
 {
 	char *content;
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
-	bus.file = file;
+	var.file = file;
 	if (!file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	{
 		content = NULL;
 		read_line = getline(&content, &size, file);
-		bus.content = content;
+		var.content = content;
 		counter++;
 		if (read_line > 0)
 		{
