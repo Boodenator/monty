@@ -49,7 +49,7 @@ void add_to_stack(stack_t **, unsigned int);
 void add_to_queue(stack_t **, unsigned int);
 
 void open_file(char *file_name);
-int parse_line(char *buffer, int line_number, int format);
+int divide_line(char *buffer, int line_no, int format);
 void read_file(FILE *);
 int len_chars(FILE *);
 void find_func(char *, char *, int, int);
