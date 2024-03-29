@@ -14,7 +14,7 @@ void read_file(FILE *fd)
 
 	for (line_no = 1; getline(&buffer, &len, fd) != -1; line_no++)
 	{
-		format = parse_line(buffer, line_no, format);
+		format = divide_line(buffer, line_no, format);
 	}
 	free(buffer);
 }
@@ -64,8 +64,6 @@ void find_func(char *opcode, char *value, int ln, int format)
 		{"mod", mod_nodes},
 		{"pchar", char_print},
 		{"pstr", str_print},
-		{"rotl", rotl},
-		{"rotr", rotr},
 		{NULL, NULL}
 	};
 
