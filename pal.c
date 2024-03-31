@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * f_pall - prints the stack
+ * fn_pal - stack print fn
  * @head: stack head
- * @counter: no used
+ * @counter: noting
  * Return: no return
 */
-void f_pall(stack_t **head, unsigned int counter)
+void fn_pal(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	(void)counter;
