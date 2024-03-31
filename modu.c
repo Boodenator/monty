@@ -19,8 +19,8 @@ void fn_modu(stack_t **head, unsigned int counter)
 	if (dig < 2)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(amg.file);
+		free(amg.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
@@ -28,8 +28,8 @@ void fn_modu(stack_t **head, unsigned int counter)
 	if (h->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", counter);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(amg.file);
+		free(amg.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

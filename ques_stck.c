@@ -9,7 +9,7 @@ void fn_que(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;
-	bus.lifi = 1;
+	amg.lifi = 1;
 }
 
 /**
@@ -57,5 +57,5 @@ void fn_stk(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;
-	bus.lifi = 0;
+	amg.lifi = 0;
 }

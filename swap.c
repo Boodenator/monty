@@ -8,19 +8,19 @@
 void fn_swap(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
-	int len = 0, aux;
+	int dig = 0, aux;
 
 	h = *head;
 	while (h)
 	{
 		h = h->next;
-		len++;
+		dig++;
 	}
-	if (len < 2)
+	if (dig < 2)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(amg.file);
+		free(amg.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

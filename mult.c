@@ -19,8 +19,8 @@ void fn_mult(stack_t **head, unsigned int counter)
 	if (dig < 2)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", counter);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(amg.file);
+		free(amg.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

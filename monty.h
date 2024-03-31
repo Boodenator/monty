@@ -1,7 +1,7 @@
 #ifndef _MONTY_H_
 #define _MONTY_H_
 #define  _GNU_SOURCE
-
+#define _POSIX_C_SOURCE 200809L
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
@@ -42,7 +42,7 @@ typedef struct bus_s
 	char *content;
 	int lifi;
 }  bus_t;
-extern bus_t bus;
+extern bus_t amg;
 
 /**
  * struct instruction_s - opcode and its function
