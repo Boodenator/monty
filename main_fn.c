@@ -11,21 +11,21 @@
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
-				{"push", f_push}, {"pall", f_pall}, {"pint", f_pint},
-				{"pop", f_pop},
-				{"swap", f_swap},
-				{"add", f_add},
-				{"nop", f_nop},
-				{"sub", f_sub},
-				{"div", f_div},
-				{"mul", f_mul},
-				{"mod", f_mod},
-				{"pchar", f_pchar},
-				{"pstr", f_pstr},
-				{"rotl", f_rotl},
-				{"rotr", f_rotr},
-				{"queue", f_queue},
-				{"stack", f_stack},
+				{"push", fn_push}, {"pall", fn_pal}, {"pint", fn_pint},
+				{"pop", fn_pop},
+				{"swap", fn_swap},
+				{"add", fn_addtn},
+				{"nop", fn_nopp},
+				{"sub", fn_subt},
+				{"div", fn_div},
+				{"mul", fn_mult},
+				{"mod", fn_modu},
+				{"pchar", fn_pchr},
+				{"pstr", fn_pstr},
+				{"rotl", fn_rotl},
+				{"rotr", fn_rotr},
+				{"queue", fn_que},
+				{"stack", fn_stk},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
@@ -53,12 +53,12 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 }
 
 /**
- * addnode - stack node addition
+ * addnod - stack node addition
  * @head: stack head
  * @n: new_value
  * Return: no return
 */
-void addnode(stack_t **head, int n)
+void addnod(stack_t **head, int n)
 {
 
 	stack_t *new_node, *aux;

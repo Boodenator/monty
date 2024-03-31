@@ -29,10 +29,10 @@ typedef struct stack_s
 /**
  * struct bus_s, variables, args, file, line content
  * @arg: value
- * @file: pointer to monty file
+ * @file: ptr to file
  * @content: line content
- * @lifi: flag change stack <-> queue
- * Description: carries values through the program
+ * @lifi: flagchange stack <-> queue
+ * Description: move values through the program
  */
 
 typedef struct bus_s
@@ -61,26 +61,26 @@ typedef struct instruction_s
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
 char  *clean_line(char *content);
-void f_push(stack_t **head, unsigned int number);
-void f_pall(stack_t **head, unsigned int number);
-void f_pint(stack_t **head, unsigned int number);
+void fn_push(stack_t **head, unsigned int number);
+void fn_pal(stack_t **head, unsigned int number);
+void fn_pint(stack_t **head, unsigned int number);
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 void free_stack(stack_t *head);
-void f_pop(stack_t **head, unsigned int counter);
-void f_swap(stack_t **head, unsigned int counter);
-void f_add(stack_t **head, unsigned int counter);
-void f_nop(stack_t **head, unsigned int counter);
-void f_sub(stack_t **head, unsigned int counter);
-void f_div(stack_t **head, unsigned int counter);
-void f_mul(stack_t **head, unsigned int counter);
-void f_mod(stack_t **head, unsigned int counter);
-void f_pchar(stack_t **head, unsigned int counter);
-void f_pstr(stack_t **head, unsigned int counter);
-void f_rotl(stack_t **head, unsigned int counter);
-void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
-void addnode(stack_t **head, int n);
-void addqueue(stack_t **head, int n);
-void f_queue(stack_t **head, unsigned int counter);
-void f_stack(stack_t **head, unsigned int counter);
+void fn_pop(stack_t **head, unsigned int counter);
+void fn_swap(stack_t **head, unsigned int counter);
+void fn_addtn(stack_t **head, unsigned int counter);
+void fn_nopp(stack_t **head, unsigned int counter);
+void fn_subt(stack_t **head, unsigned int counter);
+void fn_div(stack_t **head, unsigned int counter);
+void fn_mult(stack_t **head, unsigned int counter);
+void fn_modu(stack_t **head, unsigned int counter);
+void fn_pchr(stack_t **head, unsigned int counter);
+void fn_pstr(stack_t **head, unsigned int counter);
+void fn_rotl(stack_t **head, unsigned int counter);
+void fn_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void addnod(stack_t **head, int n);
+void queaddtn(stack_t **head, int n);
+void fn_que(stack_t **head, unsigned int counter);
+void fn_stk(stack_t **head, unsigned int counter);
 
 #endif

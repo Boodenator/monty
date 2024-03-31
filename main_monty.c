@@ -2,9 +2,9 @@
 
 bus_t bus = {NULL, NULL, NULL, 0};
 /**
-* main - monty code interpreter
+* main - code interpreter
 * @argc: arguments number
-* @argv: location of file
+* @argv: file location
 * Return: 0 if success
 */
 int main(int argc, char *argv[])
